@@ -1,8 +1,6 @@
 package com.projeto_integrador_ii_a.manager;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.*;
 import javax.persistence.*;
 
 import com.projeto_integrador_ii_a.entity.Pergunta;
