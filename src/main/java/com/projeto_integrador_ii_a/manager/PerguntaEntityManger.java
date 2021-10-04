@@ -19,10 +19,11 @@ public class PerguntaEntityManger {
 
     }
 
-    public ArrayList<Pergunta> getAll() {
+    public List<Pergunta> getAll() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
-        ArrayList<Pergunta> perguntas = new ArrayList<>();
+        TypedQuery<Pergunta> query = entityManager.createQuery("SELECT p FROM Pergunta p", Pergunta.class);
+        List<Pergunta> perguntas = query.getResultList();
 
         entityManager.close();
 
